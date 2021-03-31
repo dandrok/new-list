@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="scroll.css" />
+  </head>
+  <body>
+    <div id="full-site">
+      <section id="left">
+        <div class="form">
+          <form>
+            <label for="namelist">List name:</label>
+
+            <input type="text" id="namelist" name="namelist" value="List01" />
+            <div id="pick-colors">
+              <input
+                type="radio"
+                id="radio1"
+                name="radios"
+                value="all"
+                checked
+              />
+              <label for="radio1" class="yellow"></label>
+              <input type="radio" id="radio2" name="radios" value="false" />
+              <label for="radio2" class="green"></label>
+              <input type="radio" id="radio3" name="radios" value="true" />
+              <label for="radio3" class="blue"></label>
+              <input type="radio" id="radio4" name="radios" value="true" />
+              <label for="radio4" class="red"></label>
+              <input type="radio" id="radio5" name="radios" value="true" />
+              <label for="radio5" class="gray"></label>
+            </div>
+          </form>
+          <button onclick="addItem()">TEST</button>
+        </div>
+      </section>
+      <section id="right">
+        <!-- <div id="lista">
+          <div class="title">
+            <p>List01</p>
+            <span><button type="reset">delete</button></span>
+          </div>
+          <div class="addnew">
+            <label for="listitem">Task:</label>
+            <input type="text" id="listitem" />
+            <input type="submit" value="Add" />
+          </div>
+          <div class="tasks-list">
+            <ul>
+              <li>COS TUTAJ JEST</li>
+              <li>COS TUTAJ JEST</li>
+              <li>COS TUTAJ JEST</li>
+              <li>COS TUTAJ JEST</li>
+              <li>COS TUTAJ JEST</li>
+              <li>COS TUTAJ JEST</li>
+            </ul>
+          </div>
+        </div> -->
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

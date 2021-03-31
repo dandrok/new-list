@@ -1,0 +1,117 @@
+$colorpink: #ffefef;
+
+$colorwhite-opacity: rgba(255, 255, 255, 0.2);
+
+$coloryellow: #ffe47a;
+$colorblue: #7ad6ff;
+$colorgreen: #8bff7a;
+$colorred: #f25858;
+$colorgray: #b9b9b9;
+
+$radius: 10px;
+
+#full-site {
+  font-family: "Roboto Mono", monospace;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  #left {
+    width: 300px;
+    background-color: $colorpink;
+    height: 100vh;
+    grid-area: 1 / 1 / 4 / 2;
+    box-shadow: 6px 6px 12px #b1b1b1, -6px -6px 12px #ffffff;
+    .form {
+      padding: 10px;
+      form {
+        display: grid;
+        row-gap: 10px;
+      }
+    }
+  }
+  #right {
+    grid-area: 1 / 2 / 4 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    #lista {
+      // div with list
+      background-color: $coloryellow;
+      width: 385px;
+      height: 300px;
+      margin-top: 20px;
+      box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.54);
+      transition: all ease 0.3s;
+
+      &:hover {
+        transform: translate(2px, 2px);
+      }
+      .title {
+        width: 100%;
+        height: 50px;
+        background-color: $colorwhite-opacity;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .addnew {
+        padding: 15px;
+        border-bottom: 1px solid black;
+      }
+      .tasks-list {
+        overflow-y: auto;
+        height: 198px;
+        ul {
+          li {
+            padding: 10px 10px 1px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#pick-colors {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: $radius;
+  box-shadow: 0 1px 21.5px rgba(0, 0, 0, 0.024),
+    0 2.7px 35.4px rgba(0, 0, 0, 0.035), 0 6.2px 44.2px rgba(0, 0, 0, 0.046),
+    0 20px 80px rgba(0, 0, 0, 0.07);
+
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    background-color: rgb(61, 26, 26);
+
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+  }
+  input[type="radio"]:checked + label {
+    border: #000 solid 1.5px;
+  }
+  .yellow {
+    background-color: $coloryellow;
+  }
+  .green {
+    background-color: $colorgreen;
+  }
+  .blue {
+    background-color: $colorblue;
+  }
+  .red {
+    background-color: $colorred;
+  }
+  .gray {
+    background-color: $colorgray;
+  }
+}
